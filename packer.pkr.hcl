@@ -27,6 +27,9 @@ build {
       "apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin"
     ]
   }
-
+ post-processor "docker-tag" {
+    repository = "registry.gitlab.com/s3cloudhub2/docker-example"
+    tag        = ["latest", "v1.0.0"]
+  }
 
 }
